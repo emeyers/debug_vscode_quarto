@@ -1,0 +1,134 @@
+# Python basics
+
+
+
+This chapter introduces the fundamental concepts and basic syntax of the Python programming language. All the code covered here is part of the standard Python language and does not require any additional packages or libraries. Thus the Python discussed here forms the foundation for not only analyzing data in Python, but also for writing any kind of Python code. 
+
+While the chapter covers several different key concepts and syntax of Python, we focus on a subset of features that are most central for data analysis, rather than covering the full range of Python's capabilities.  Becoming proficient in the basic Python covered in this chapter will be important as a basis for writing code in subsequent chapters, so make sure to practice and understand these concepts thoroughly.
+
+By the end of this chapter, you should be comfortable with writing basic Python code, performing simple calculations, and understanding how Python represents and manipulates different types of data. These foundational skills will prepare you for more advanced topics in data analysis that are covered in the rest of the book. 
+
+
+
+## Expressions 
+
+A **Python expression** is **any piece of code that produces a value.**. For example, the following is an expression that simply creates the number 21.
+
+```{python}
+
+21
+
+```
+
+Similarly, an expression could be a series of mathematical operations that evaluate to number. For example, if want want to add 5 plus 2 and then multiple the result by 6 we can write:  
+
+```{python}
+
+6 * (5 + 2) 
+
+```
+
+As mentioned above, the defining features of a *python expression* is that it produces a value. Expressions are one of the fundamental building blocks of data analysis and they will appear frequently throughout this book. 
+
+
+::: {.callout-tip title="Exercise" #exercise-python_basics-expressions}
+
+
+What would happen if we remove the parenthesis from the expression we ran above and instead run `6 * 5 + 2`. See if you can predict what the result will be and then try it out in Python by running the code in a code cell and see if you get the result you predicted. 
+
+:::
+
+
+::: {.callout-note title="Solution" #solution-python_basics-expressions collapse="true"}
+
+```{python}
+
+6 * 5 + 2
+
+```
+
+The result is 32, which makes sense because in the standard order of mathematical operations, multiplication occurs before addition so we multiple 6 * 5 and get 30, and then we add 2 to get 32. 
+
+:::
+
+
+
+### Mathematical expressions
+
+The expressions shown above were all "mathematical expressions" because they involve calculating numeric quantities. We can also write statements that will do operations on text and other types of data which we will describe more below. But first, let's explore mathematical expressions a bit more. Below is a table of some of the mathematical operations that are part of
+
+| Operation        | Symbol | Example     | Result |
+|------------------|--------|-------------|--------|
+| Addition         |   +    | 5 + 3       |   8    |
+| Subtraction      |   -    | 10 - 4      |   6    |
+| Multiplication   |   *    | 7 * 2       |  14    |
+| Division         |   /    | 12 / 5      |   2.4  |
+| Exponentiation   |   **   | 3 ** 2      |   9    |
+| Remainder        |   %    | 10 % 3      |   1    |
+
+: Python mathematical operators {#tbl-math-ops}
+
+
+::: {.callout-tip title="Exercise" #exercise-python-math_expression}
+
+What is the remainder from dividing 365 by 7? Please write some Python code that produces the answer.
+
+:::
+
+
+::: {.callout-note title="Solution" #solution-python-math_expression collapse="true"}
+
+```{python}
+
+365 % 7
+
+```
+
+:::
+
+
+
+## Syntax 
+
+**Syntax** is the set of rules that defines how Python code **must** be written. One that think of syntax as the grammar of the Python programming language. In order for Python to be able to run your code, it **must** use the correct syntax. 
+
+To illustrate this, let's calculate the value of 8 squared ($8^2$) which hopefully you remember is equal to the value of 64. As shown @tbl-math-ops, if we want to take a value `x` to the power `y` (i.e., to calculate $x^y$) we use the syntax `x**y`. So, if we wanted to calculate $8^2$ we would write the following Python code: 
+
+
+```{python}
+
+8**2
+
+```
+
+Since we have written the correct syntax, the code runs and the result of 64 is calculated as expected. 
+
+However, if we accidentially put an extra space between the two `*` symbols, Python will not know how to interpret the expression and we will get a syntax error as shown below:
+
+```{python}
+#| error: true
+
+
+"hey"
+
+
+```
+
+
+ERROR NUMBER 1: If python produces an error message with a ^ this will make it so that Quarto document will not be able to render to a pdf :(
+
+For example, if I use a string without a closing quote this will produce this type of error
+
+`"hey`   
+
+Likewise if I have a cell with the following it will produce this type of error: 
+
+`"8 * * 2`  
+
+
+
+
+When there is a syntax error, Python will print out `SyntaxError` and give you an indication where the syntax error has occurred using a ^ symbol.^[The reason this is a syntax error is because Python inteprets a single `*` symbol as a multiplicaiton symbol. Thus it is trying to multiple 8 by another multiplication symbol `*`, which gives an error since one can only multiply two numbers together.] As we can see here, Python is trying to show that the syntax error has occurred due to the extra space between the * symbols. 
+
+
+CONTINUING TO TRY TO FIND THE SECOND ERROR...

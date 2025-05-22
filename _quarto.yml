@@ -1,5 +1,12 @@
 project:
-  type: manuscript
+  type: book
+
+book:
+  title: "Introduction to Data Science"
+  author: "Ethan Meyers"
+  chapters:
+    - index.qmd
+    - python_basics.qmd
 
 execute:
   freeze: auto
