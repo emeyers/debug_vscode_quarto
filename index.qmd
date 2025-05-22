@@ -36,12 +36,20 @@ number-sections: true
 jupyter: python3
 ---
 
+# Testing!!!  May 22 
+
+
 ## Introduction
+
 
 ```{python}
 import matplotlib.pyplot as plt
 import numpy as np
 eruptions = [1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021]
+
+plt.plot([1, 2, 3, 4])
+
+
 ```
 
 ```{python}
