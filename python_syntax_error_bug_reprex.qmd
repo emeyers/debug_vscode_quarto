@@ -1,0 +1,69 @@
+---
+title: "Printing python syntax error example"
+format: pdf
+---
+
+Running this code using `quarto render .\python_syntax_error_bug_reprex.qmd`
+
+
+
+# Error number 1
+
+```{python}
+#| error: true
+
+
+8* *2
+
+```
+
+Hmmm, this works here but is not working in the book :(
+
+
+
+
+
+# Error number 2 
+
+This gives an error on my Windows computer but works fine on my mac. It seems that an extra space is being added before each underscore in my path in Windows (there are no spaces in the real path)
+
+
+```{python}
+#| error: true
+#| eval: false   
+
+# adding eval: fals so that I can debug why the first piece of code is not causing the document to fail to knit
+
+# There is a limited size to integers (although the size is pretty large)
+
+1234567 ** 890 
+
+
+```
+
+The above still does not work and gives the error message
+
+
+
+This is the error message given for Error number 2
+
+```
+
+updating tlmgr
+
+
+updating existing packages
+ERROR: 
+compilation failed- error
+Undefined control sequence.
+<argument> ~\Desktop
+                     \git _repos\books _to_write\debug _vscode_quarto\.venv\...
+l.235 ..., obj)}\textcolor{QuartoInternalColor2}{}
+
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+```
